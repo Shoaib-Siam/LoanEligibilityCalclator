@@ -9,6 +9,7 @@
     <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
+<<<<<<< HEAD
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -21,6 +22,23 @@
             position: relative;
             overflow: hidden;
         }
+=======
+        <!-- Email Address -->
+        <div class="mb-4">
+            <x-input-label for="email" :value="__('Email Address')" />
+            <x-text-input 
+                id="email" 
+                class="block mt-1 w-full" 
+                type="email" 
+                name="email" 
+                :value="old('email')" 
+                required 
+                autofocus 
+                autocomplete="username" 
+            />
+            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+        </div>
+>>>>>>> 5cd0ed7bf1937a371dda95d7d9e7255f2fa417da
 
         .background-circles {
             position: absolute;
@@ -29,6 +47,7 @@
             z-index: -1;
         }
 
+<<<<<<< HEAD
         .circle {
             position: absolute;
             border-radius: 50%;
@@ -176,6 +195,39 @@
         <div class="circle small"></div>
         <div class="circle medium"></div>
         <div class="circle large"></div>
+=======
+        <!-- Remember Me -->
+        <div class="block mt-4">
+            <label for="remember_me" class="inline-flex items-center">
+                <input 
+                    id="remember_me" 
+                    type="checkbox" 
+                    class="rounded border-gray-300 text-blue-600 shadow-sm focus:ring-blue-500" 
+                    name="remember"
+                />
+                <span class="ms-2 text-sm text-gray-600">{{ __('Remember Me') }}</span>
+            </label>
+        </div>
+
+        <div class="flex items-center justify-end mt-4">
+            @if (Route::has('password.request'))
+                <a class="underline text-sm text-blue-600 hover:text-blue-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" href="{{ route('password.request') }}">
+                    {{ __('Forgot your password?') }}
+                </a>
+            @endif
+
+            <x-primary-button class="ms-3 bg-blue-500 hover:bg-blue-600">
+                {{ __('Log in') }}
+            </x-primary-button>
+        </div>
+    </form>
+
+    <!-- Custom Message after login -->
+    <div class="mt-6 text-center">
+        <p class="text-sm text-gray-700">
+            Don't have an account? <a href="{{ route('register') }}" class="underline text-blue-600 hover:text-blue-900">{{ __('Register here') }}</a>
+        </p>
+>>>>>>> 5cd0ed7bf1937a371dda95d7d9e7255f2fa417da
     </div>
 
     <div class="container">

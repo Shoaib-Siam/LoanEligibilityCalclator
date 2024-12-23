@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<<<<<<< HEAD
 <div class="container mx-auto mt-20 px-6 bg-gradient-animation">
     <!-- Profile Section -->
     <div class="flex justify-center items-center mb-12">
@@ -41,6 +42,19 @@
         <!-- Check Eligibility Button -->
         <a href="{{ route('loan.eligibility') }}" class="bg-gradient-to-r from-teal-500 to-teal-600 text-white font-semibold py-3 px-8 rounded-full shadow-xl transform hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-300 ease-in-out">
             Check Eligibility
+=======
+<div class="container mx-auto text-center mt-20 px-4">
+    <h1 class="text-4xl font-bold mb-6 text-gray-800">Welcome to ABCD Bank Dashboard</h1>
+    <p class="text-lg text-gray-600 mb-4">Manage your account, check loan eligibility, and explore our banking services.</p>
+    <div class="flex justify-center items-center space-x-4 mt-6">
+        <!-- Check Eligibility Button -->
+        <a href="{{ route('loan.eligibility') }}" class="bg-blue-500 text-white font-medium px-6 py-3 rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 transition duration-300">
+            Check Loan Eligibility
+        </a>
+        <!-- View Services Button -->
+        <a href="/services" class="bg-green-500 text-white font-medium px-6 py-3 rounded-lg shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75 transition duration-300">
+            View Our Services
+>>>>>>> 5cd0ed7bf1937a371dda95d7d9e7255f2fa417da
         </a>
 
         <!-- Logout Button -->
